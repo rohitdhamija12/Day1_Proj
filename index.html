@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style.css">
+    <script src="./Script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="txt" id="txtid" placeholder="Enter ID"><br><br>
+        <input type="text" class="txt" id="txtname" placeholder="Enter Name"><br><br>
+        <input type="text" class="txt" id="txtage" placeholder="Enter Age"><br><br>
+        <button onclick="Sumfun()">Submit</button>
+        <button onclick="Sumfun1()">Export to Excel</button>
+
+           </div>
+           <div class="tablecont">
+            <table border="2px" id="outputtable">
+                <thead>
+                    <tr>
+                        <th class="col col-1">ID</th>
+                        <th class="col col-2">Name</th>
+                        <th class="col col-2">Age</th>
+                    </tr>
+                </thead>
+                <tbody id="outputtablebody">
+                </tbody>
+            </table>
+        </div>
+
+        </body>
+</html>

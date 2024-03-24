@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to bottom right, #ff0000, #00ff00, #0000ff);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin:20px auto;
+    text-align: center;
+}
+.txt {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.tablecont{
+    padding: 30px;
+    width: 400px;
+    margin:0 auto;
+}
+
+.tablecont {
+    overflow-x: auto;
+}
+
+#outputtable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+#outputtable th,
+#outputtable td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#outputtable th {
+    background-color: #f2f2f2;
+}
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    #outputtable {
+        border: none;
+    }
+    
+    #outputtable thead {
+        display: none;
+    }
+    
+    #outputtable tbody, #outputtable tr, #outputtable td {
+        display: block;
+        width: 100%;
+    }
+    
+    #outputtable td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+    
+    #outputtable td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
